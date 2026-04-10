@@ -1,0 +1,224 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.navBar {
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #1e293b;
+}
+
+.navBar h1 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.navBar p {
+  font-size: 14px;
+  color: #94a3b8;
+}
+/* MAIN LAYOUT */
+.container {
+  display: flex;
+  height: 100vh;
+  background: #f5f7fb;
+}
+
+/* LEFT PANEL */
+.left {
+  width: 30%;
+  padding: 15px;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+/* USER CARD */
+.user-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.user-card:hover {
+  background: #e6f0ff;
+}
+
+.user-card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.user-card p {
+  font-weight: 600;
+}
+
+/* RIGHT PANEL */
+.right {
+  width: 70%;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* USER DETAILS CARD */
+.user-details-card {
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid #1e293b;
+}
+
+/* Heading */
+.user-details-card h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+/* Grid layout */
+.user-details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* Each item */
+.user-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.user-item span {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.user-item b {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+/* REPO SECTION */
+.repo-section {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.repo-section h2 {
+  margin-bottom: 15px;
+}
+
+/* REPO CARD */
+.repo-card {
+  border: 1px solid #eee;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.repo-card p {
+  margin-bottom: 5px;
+}
+
+/* LOADING */
+.loading {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* EMPTY STATE */
+.empty {
+  text-align: center;
+  margin-top: 20px;
+  color: gray;
+}
+
+/* ===== TABLET (<= 1024px) ===== */
+@media (max-width: 1024px) {
+  .left {
+    width: 40%;
+  }
+
+  .right {
+    width: 60%;
+  }
+
+  .user-details-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== MOBILE (<= 768px) ===== */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .left {
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .user-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navBar h1 {
+    font-size: 22px;
+  }
+
+  .navBar p {
+    font-size: 12px;
+  }
+
+  .user-card {
+    padding: 10px;
+  }
+
+  .user-card img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* ===== SMALL MOBILE (<= 480px) ===== */
+@media (max-width: 480px) {
+  .navBar {
+    padding: 15px;
+  }
+
+  .search-bar {
+    padding: 8px;
+  }
+
+  .repo-card {
+    padding: 10px;
+  }
+}
